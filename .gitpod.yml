@@ -1,0 +1,31 @@
+image:
+  file: Dockerfile
+ports:
+#  - port: 27017
+#    onOpen: ignore
+#  - port: 8081
+#    onOpen: ignore
+  - port: 8005
+    onOpen: open-preview
+tasks:
+#  - init: if [ -f $GITPOD_REPO_ROOT/scripts/run_on_init.sh ]; then chmod +x $GITPOD_REPO_ROOT/scripts/run_on_init.sh && $GITPOD_REPO_ROOT/scripts/run_on_init.sh; fi && echo "teste ok"
+#  - command: mongo-express -H 127.0.0.1 & mongod
+#  - command: alias start-mongo-express='mongo-express -H 127.0.0.1 & mongod'
+  - command: echo "Starting sqlite workspace"
+  - command: php -S localhost:8005 ./phpliteadmin.php
+vscode:
+  extensions:
+    - austenc.laravel-blade-spacer@1.0.3:iQ+wc1o3sg9U3k+I1g1J2w==
+#    - onecentlin.laravel-blade@1.20.0:cRpyKxGh7po7Nes2YsNVLg==
+#    - tiansin.vscode-laravel-assist@0.1.7:GEJzc+tLqwGoCs6GZsq63w==
+#    - alefragnani.Bookmarks@10.5.0:gIDcNP8zFn99fweImt4TEw==
+#    - mkloubert.vscode-kanban@1.26.2:0lplT00eA+EiYHicx8A+Jw==
+#    - natewallace.angular2-inline@0.0.17:ojWcsbGsGnlz1DFYerNaFA==
+#    - Angular.ng-template@0.802.3:NXdGFSAjVGIf2hXGs2sKbg==
+#    - wayou.vscode-todo-highlight@1.0.4:8IqxuxCVol2WnScJc5xVzg==
+#    - Mikael.Angular-BeastCode@8.0.10:J7aGjVXXDeyuqnhsk+vMYw==
+#    - Divni.open-files@0.0.4:tD+la1gjzdTnHe/5V+IQpQ==
+#    - formulahendry.auto-close-tag@0.5.6:oZ/8R2VhZEhkHsoeO57hSw==
+#    - johnpapa.Angular2@8.1.1:5n047Q4w8oMstLXJadb7tg==
+#    - alexiv.vscode-angular2-files@1.6.2:FWRDYYIh9NqVBX/S0KQ/Rw==
+#    - steoates.autoimport@1.5.3:ssEPucpXsRjqSbJX1bW0YA==
