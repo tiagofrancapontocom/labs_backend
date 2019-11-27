@@ -13,6 +13,7 @@ tasks:
 #  - command: alias start-mongo-express='mongo-express -H 127.0.0.1 & mongod'
   - command: echo "Starting sqlite workspace"
   - command: php -S localhost:8005 ./phpliteadmin.php
+  - command: cat ./aliases.sh > ~/.bash_aliases && source ~/.bashrc
 vscode:
   extensions:
     - austenc.laravel-blade-spacer@1.0.3:iQ+wc1o3sg9U3k+I1g1J2w==
